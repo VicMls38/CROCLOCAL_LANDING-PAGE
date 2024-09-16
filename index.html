@@ -4,41 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil</title>
-
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
-    
-    <div class="div_body">
-
-    </div>
-    <footer>
-        <div class="div_footer">
-            <div class="footer_col_left">
-                <img src="Calque_1.png" alt="">
-                <h4>Entreprise française spécialisée <br> dans l'emballage pour les boissons <br> et les produits alimentaires.</h4>
-                <p>Tous droits réservés.</p>
-            </div>
-
-
-            <div class="footer_col_right">
-                <div class="footer_col_right_1">
-                    <h3>A propos</h3>
-                    <p>Mentions légales</p>
-                    <p>Poilitique de Cookies</p>
-                    <p>Contact</p>
+    <div class="page-container">
+        <!-- Contenu de la page principal -->
+        <div class="content-wrap">
+            <!-- Slider -->
+            <div class="slider-container">
+                <div class="slider" id="slider">
+                    <div class="slide">
+                        <div class="avis-box">
+                            <p>"Avis 1 : Très bon produit, je suis satisfait de mon achat."</p>
+                            <span>- Client 1</span>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="avis-box">
+                            <p>"Avis 2 : Livraison rapide, le produit est conforme."</p>
+                            <span>- Client 2</span>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="avis-box">
+                            <p>"Avis 3 : Excellente qualité, je recommande vivement !"</p>
+                            <span>- Client 3</span>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="avis-box">
+                            <p>"Avis 4 : Service client au top, merci !"</p>
+                            <span>- Client 4</span>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="avis-box">
+                            <p>"Avis 5 : Produit reçu en bon état, facile à installer."</p>
+                            <span>- Client 5</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="footer_col_right_2">
-                    <h3>En savoir plus</h3>
-                    <p>Espace presse</p>
-                    <p>En savoir plus</p>
-                    <p>Besoin d'aide</p>
-                    <p>FAQ</p>
-                </div>
+                <!-- Flèches gauche et droite -->
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
             </div>
         </div>
-    </footer>
+
+        <!-- Footer -->
+        <footer>
+            <div class="div_footer">
+                <div class="footer_col_left">
+                    <img src="Calque_1.png" alt="">
+                    <h4>Entreprise française spécialisée <br> dans l'emballage pour les boissons <br> et les produits alimentaires.</h4>
+                    <p>Tous droits réservés.</p>
+                </div>
+
+                <div class="footer_col_right">
+                    <div class="footer_col_right_1">
+                        <h3>A propos</h3>
+                        <p>Mentions légales</p>
+                        <p>Poilitique de Cookies</p>
+                        <p>Contact</p>
+                    </div>
+
+                    <div class="footer_col_right_2">
+                        <h3>En savoir plus</h3>
+                        <p>Espace presse</p>
+                        <p>En savoir plus</p>
+                        <p>Besoin d'aide</p>
+                        <p>FAQ</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+    </div>
 </body>
 </html>
