@@ -1,0 +1,474 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+.head_img_div {
+    width: 100%;
+    min-height: 100vh;
+    background: 
+        linear-gradient(
+            to bottom, 
+            rgba(0, 0, 0, 0) 50%, 
+            #fff 100%
+        ), 
+        url('../img/img_top_1.png') no-repeat center center / cover;
+    background-color: #fff; /* Same as the final color of the gradient */
+}
+
+.logo_div{
+    height: 70vh;
+}
+
+.logo_img{
+    display: block;
+    margin: 0 auto 20% auto;
+    max-width: 100%;
+}
+
+.head_img_text{
+    display: block;
+    margin: 0 auto 0 auto;
+    width: 50%;
+    font-size: x-large;
+    text-align: center;
+}
+.head_img_text .fleche_bas{
+    display: block;
+    margin: 10% auto 0 auto;
+}
+
+/* ---------------------------------------------*/
+
+.head_text_div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-bottom: 100px;
+    min-height: 300px;
+}
+.head_text_text{
+    width: 62%;
+    margin-left: 8%;
+    position: relative;
+    top: -5%;
+}
+.head_text_text h1{
+font-weight: bolder;
+color: #F29A79;
+}
+.head_text_text p{
+margin-top: 5%;
+}
+.head_text_text .btn_download{
+    margin-top: 5%;
+    width: 35%;
+    padding: 15px;
+    border-radius: 40px;
+    border: 2px solid #F29A79;
+    background-color: #F29A79;
+    color: #fff;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+.head_text_text .btn_download:hover{
+    cursor: pointer;
+    color: #F29A79;
+    background-color: #fff;
+}
+
+.produit_vert_right{
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.produit_vert_right div{
+    max-width: 120px;
+}
+
+.produit_vert_right div img{
+    width: 100%;
+    height: auto;
+}
+
+.img_produit_vert{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 0;
+}
+
+.img_rose_div{
+    position: relative;
+    width: 95%;
+    margin: 0 auto 75px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.img_rose_div::before {
+    content: "";
+    position: absolute;
+    inset: 0 calc(50% - 50vw);
+    z-index: -1;
+}
+
+.img_rose_div div {
+    max-width: 150px;
+}
+
+.img_rose_div div img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+}
+
+.img_rose_div div h3 {
+    text-align: center;
+}
+
+.img_rose{
+    max-width: 80%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.title_category{
+    margin: 2% auto 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+/*-------------------------------------------*/
+
+.mid_content_div{
+    width: 100%;
+}
+.title_1_mid_content{
+    margin-bottom: 5%;
+    margin-left: 5%;
+    color: #F29A79;
+}
+
+.all_mid_content{
+    margin: 0 5%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 30px;
+    position: relative;
+}
+.all_mid_content::after{
+    content: url('../img/hexagon_vert.png');
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 50vw);
+    z-index: 0;
+    transform: translateY(60%);
+}
+
+.mid_all_content{
+ width: 40%;
+ min-width: 420px;
+}
+
+.mid_content{
+    border-radius: 20px;
+    border: solid 3px #6DBFA9;
+    overflow: hidden;
+    position: relative;
+    padding: 30px;
+    z-index: 1;
+    min-height: 400px;
+}
+.mid_content img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+    z-index: 1;
+    
+}
+
+.mid_text_content{
+    padding: 25px;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    background-color: #fff;
+    position: relative;
+    color: black !important;
+    z-index: 3;
+}
+
+.mid_text_content h2{
+    margin-bottom: 10%;
+    font-size: 40px;
+    color: #F29A79;
+}
+.mid_text_content p{
+    font-size: large;
+}
+
+.mid_content_btn{
+    display: block;
+    margin: 5% auto;
+    border-radius: 50px;
+    border: 2px solid #F29A79;
+    background-color: #F29A79;
+    padding: 15px;
+    color: #fff;
+    font-size: large;
+    transition: all 0.3s;
+    position: relative;
+    z-index: 1;
+}
+
+.mid_content_btn:hover{
+    cursor: pointer;
+    color: #F29A79;
+    background-color: #fff;
+}
+
+/* -------------------------------------------*/
+
+.pourquoi_div{
+    padding: 60px 0 50px;
+    width: 100%;
+    border-radius: 16px;
+    position: relative;
+
+}
+.pourquoi_div.orange{
+    margin-top: 25%;
+    background-color: #F29A79;
+}
+
+.pourquoi_div.orange h2{
+    color:#fff;
+}
+
+.pourquoi_div h2{
+    margin-left: 10%;
+    
+}
+
+.flex_pourquoi_div{
+    margin: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+
+.flex_pourquoi_text, .flex_pourquoi_img{
+    flex: 1 1 calc(50% - 30px);
+}
+
+.flex_pourquoi_text{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pourquoi_div.orange .flex_pourquoi_text h3,
+.pourquoi_div.orange .flex_pourquoi_text p {
+    color: #fff;
+}
+
+.flex_pourquoi_text h3{
+    margin-bottom: 15%;
+}
+
+.flex_pourquoi_text p{
+    margin-bottom: 15%;
+    
+}
+
+.pourquoi_img{
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.pourquoi_div .btn_download{
+    padding: 15px;
+    border-radius: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    color: white;
+    border: 1px solid #F29A79;
+    background: #F29A79;
+    font-weight: bold;
+    font-size: medium;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.pourquoi_div.orange .btn_download{
+    color: #F29A79;
+    background-color: #fff; 
+    border: 2px solid #fff; 
+    transition: all 0.3s;
+}
+
+.pourquoi_div .btn_download:hover{
+    background-color: #fff;  
+    color: #F29A79;
+
+}
+
+.pourquoi_div.orange .btn_download:hover{
+    background-color: #F29A79;  
+    color: #fff;
+    }
+/*-----------------------------------------*/
+
+.all_equipe_div{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    width:100%;
+}
+
+.equipe_div{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.all_equipe_div h2{
+    color: #F29A79;
+    margin-bottom: 75px;
+    margin-left: 75px;
+}
+
+.equipe_div h4{
+    margin-top: 10%;
+    text-align: center;
+}
+
+
+.membre_equipe{
+    background-color: #F29A79;
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.membre_equipe img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.div_form{
+    max-width: 70%;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 150px;
+}
+.div_form ::before{
+    content: '';
+    background-image: url('../img/fleur.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: -10px;
+    left: calc(50% - 50vw);
+    z-index: -1;
+    height: 300px;
+    width: 300px;
+}
+.div_form ::after{
+    content: '';
+    background-image: url('../img/ruche.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: -10px;
+    right: calc(50% - 50vw);
+    z-index: -1;
+    width: 250px;
+    height: 250px;
+}
+
+.div_form h2{
+    color:#F29A79;
+    margin-bottom: 50px;
+
+}
+
+.div_form form{
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.div_form form input, .div_form form textarea{
+
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    background-color: #F6F4EB;
+}
+
+.div_form form textarea{
+    min-height: 150px;
+}
+
+#receive_message{
+    background-color: #F6F4EB;
+}
+
+#capchat{
+    background-color: #F6F4EB;
+}
+
+.div_form form button{
+    margin: 0 auto;
+    background-color: #F29A79;
+    font-weight: bold;
+    border-radius: 40px;
+    padding: 15px;
+    width: fit-content;
+   border: 2px solid #F29A79;
+   transition: all 0.3s;
+    color: white;
+}
+.div_form form button:hover{
+    background-color: #fff;
+    color: #F29A79;
+    cursor: pointer;
+}
+.div_avis{
+    width: 100%;
+    height: 20rem;
+    background-color: #F29A79;
+    border-radius: 16px;
+}
