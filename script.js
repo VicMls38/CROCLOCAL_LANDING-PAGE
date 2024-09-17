@@ -1,21 +1,46 @@
 let currentSlide = 0;
 
-function moveSlide(direction) {
+function updateSlidePosition() {
     const slider = document.getElementById("slider");
-    const totalSlides = document.querySelectorAll(".slide").length;
+    const slides = document.querySelectorAll(".slide");
+    const totalSlides = slides.length;
 
-    // Calculer le nouvel index
+    if (totalSlides === 0) return; // S'il n'y a pas de slides, rien à faire
+
+    // Calculer la largeur de la slide active et le container
+    const slideWidth = slides[0].offsetWidth;
+    const containerWidth = document.querySelector('.slider-container').clientWidth;
+    const slideMargin = 10; // Marge entre les slides
+
+    // Calculer l'offset pour centrer la slide active
+    const offset = (containerWidth - slideWidth) / 2;
+    
+    // Ajuster le déplacement du slider en tenant compte des marges
+    const translateX = -(currentSlide * (slideWidth + slideMargin * 2)) + offset;
+
+    slider.style.transform = `translateX(${translateX}px)`;
+}
+
+// Fonction pour changer la diapositive
+function moveSlide(direction) {
+    const slides = document.querySelectorAll(".slide");
+    const totalSlides = slides.length;
+
+    // Calcul du nouvel index
     currentSlide += direction;
 
-    // Si on dépasse la dernière slide, on revient à la première
+    // Revenir au début ou à la fin si on dépasse les limites
     if (currentSlide >= totalSlides) {
         currentSlide = 0;
-    }
-    // Si on dépasse la première slide en allant à gauche, on va à la dernière
-    else if (currentSlide < 0) {
+    } else if (currentSlide < 0) {
         currentSlide = totalSlides - 1;
     }
 
-    // Appliquer la transformation pour afficher la slide correspondante
-    slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+    updateSlidePosition();
 }
+
+// Initialiser la position du slider
+updateSlidePosition();
+
+// Recalculer la position lors du redimensionnement de la fenêtre
+window.addEventListener('resize', updateSlidePosition);

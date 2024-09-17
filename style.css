@@ -20,57 +20,51 @@ html, body {
     align-items: flex-end; /* Pour coller le slider au footer */
 }
 
-/* Slider */
+
 .slider-container {
     width: 100%;
     position: relative;
     overflow: hidden;
-    background-color: transparent;
     background-color: #F29A79;
+    padding: 0; /* Supprimer le padding */
 }
 
 .slider {
     display: flex;
     transition: transform 0.5s ease;
-    width: 100%;
 }
 
-/* Slide configuration */
 .slide {
-    width: 100%;
+    flex: 0 0 auto; /* Fixe la taille des slides en fonction de la largeur du conteneur */
+    width: 80%; /* Largeur en pourcentage */
+    margin: 0 2.5%; /* Espacement entre les slides ajusté en pourcentage */
     display: flex;
-    justify-content: center; /* Centrer horizontalement */
-    align-items: center; /* Centrer verticalement */
-    flex-shrink: 0;
-    height: 300px; /* Vous pouvez ajuster cette hauteur selon vos besoins */
+    justify-content: center;
+    align-items: center;
+    height: 300px; /* Hauteur des slides */
+    position: relative;
 }
 
-/* Cadre de l'avis */
 .avis-box {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    max-width: 80%; /* Taille maximale de l'avis, ajustable */
+    width: 100%; /* Taille fixe */
+    height: 200px; /* Taille fixe */
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+    right: 8%;
     text-align: center;
+    box-sizing: border-box; /* Inclure padding et border dans les dimensions */
 }
 
-.avis-box p {
-    font-style: italic;
-    color: #555;
-    margin-bottom: 10px;
-}
 
-.avis-box span {
-    font-weight: bold;
-    color: #333;
-}
-
-/* Flèches */
 .prev, .next {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-160%);
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
@@ -78,8 +72,10 @@ html, body {
     cursor: pointer;
     font-size: 24px;
     border-radius: 50%;
+    z-index: 10; /* Assurez-vous que les flèches sont au-dessus du slider */
 }
 
+/* Position des flèches */
 .prev {
     left: 10px;
 }
@@ -88,9 +84,11 @@ html, body {
     right: 10px;
 }
 
+/* Changement des flèches au survol */
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
+
 
 /* Footer */
 footer {
@@ -126,4 +124,58 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+
+
+/* Styles pour les petits écrans */
+
+@media (max-width: 1200px) {
+    .prev, .next {
+        transform: translateY(-650%);
+        padding: 8px; /* Réduire le padding des flèches */
+        font-size: 20px; /* Réduire la taille du texte */
+    }
+
+    .prev {
+        left: 5px; /* Ajuster la position à gauche */
+    }
+
+    .next {
+        right: 5px; /* Ajuster la position à droite */
+    }
+}
+
+
+@media (max-width: 600px) {
+    .prev, .next {
+        transform: translateY(-700%);
+        padding: 8px; /* Réduire le padding des flèches */
+        font-size: 20px; /* Réduire la taille du texte */
+    }
+
+    .prev {
+        left: 5px; /* Ajuster la position à gauche */
+    }
+
+    .next {
+        right: 5px; /* Ajuster la position à droite */
+    }
+}
+
+/* Styles pour les écrans très petits (ex. : portrait téléphone) */
+@media (max-width: 400px) {
+    .prev, .next {
+        transform: translateY(-550%);
+        padding: 6px; /* Réduire encore plus le padding */
+        font-size: 18px; /* Réduire encore plus la taille du texte */
+    }
+
+    .prev {
+        left: 3px; /* Ajuster la position à gauche */
+    }
+
+    .next {
+        right: 3px; /* Ajuster la position à droite */
+    }
 }
