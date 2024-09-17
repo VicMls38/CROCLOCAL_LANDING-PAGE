@@ -60,6 +60,11 @@ html, body {
     box-sizing: border-box; /* Inclure padding et border dans les dimensions */
 }
 
+.avis{
+    display: flex; 
+    justify-content: space-between;
+}
+
 
 .prev, .next {
     position: absolute;
