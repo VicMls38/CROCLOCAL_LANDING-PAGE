@@ -68,7 +68,7 @@ html, body {
 
 .prev, .next {
     position: absolute;
-    top: 50%;
+    top: 53%;
     transform: translateY(-160%);
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
@@ -99,7 +99,7 @@ html, body {
 footer {
     width: 100%;
     background-color: #f9f9f9;
-    padding: 20px 0;
+    padding: 0 0;
     position: relative;
     bottom: 0;
     font-family: "Poppins", sans-serif;
@@ -115,8 +115,10 @@ footer {
     flex-wrap: wrap;
 }
 
-.div_footer p {
+.div_footer a, p {
+    text-decoration: none;
     color: #777;
+    margin-bottom: 1rem;
 }
 
 .footer_col_left h4 {
@@ -125,10 +127,20 @@ footer {
 
 .footer_col_right {
     margin-top: 3%;
-    width: 30%;
+    width: 20rem;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+.footer_col_right_1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_col_right_2 {
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -137,7 +149,6 @@ footer {
 
 @media (max-width: 1200px) {
     .prev, .next {
-        transform: translateY(-650%);
         padding: 8px; /* Réduire le padding des flèches */
         font-size: 20px; /* Réduire la taille du texte */
     }
@@ -148,6 +159,23 @@ footer {
 
     .next {
         right: 5px; /* Ajuster la position à droite */
+    }
+}
+
+@media (max-width: 830px) {
+    .prev, .next {
+        transform: translateY(-700%);
+        padding: 8px; /* Réduire le padding des flèches */
+        font-size: 20px; /* Réduire la taille du texte */
+    }
+    
+    .div_footer {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer_col_right {
+        width: 30rem;
     }
 }
 
@@ -171,7 +199,7 @@ footer {
 /* Styles pour les écrans très petits (ex. : portrait téléphone) */
 @media (max-width: 400px) {
     .prev, .next {
-        transform: translateY(-550%);
+        transform: translateY(-850%);
         padding: 6px; /* Réduire encore plus le padding */
         font-size: 18px; /* Réduire encore plus la taille du texte */
     }
@@ -182,5 +210,15 @@ footer {
 
     .next {
         right: 3px; /* Ajuster la position à droite */
+    }
+}
+
+@media (max-width: 382px) {
+    .footer_col_right {
+        justify-content: center;
+    }
+    
+    .footer_col_right_1 {
+        padding-right: 0;
     }
 }
