@@ -478,17 +478,18 @@ margin-top: 5%;
 
 
 
-footer{
+/* Footer */
+footer {
     width: 100%;
+    background-color: #f9f9f9;
+    padding: 0 0;
     position: relative;
     bottom: 0;
-    padding-bottom: 3%;
     font-family: "Poppins", sans-serif;
     font-weight: 200;
-    font-style: normal;
 }
 
-.div_footer{
+.div_footer {
     margin-left: auto;
     margin-right: auto;
     width: 80%;
@@ -497,19 +498,132 @@ footer{
     flex-wrap: wrap;
 }
 
-.div_footer p{
-    color: #777777;
+.div_footer a {
+    text-decoration: none;
+    color: #777;
+    margin-bottom: 0.8rem;
 }
 
-.footer_col_left h4{
+.div_footer p {
+    color: #777;
+    margin-bottom: 0.8rem;
+    margin-top: 2rem;
+}
+
+.div_footer h3 {
+    margin-bottom: 1rem;
+}
+
+.footer_col_left h4 {
     color: #6DBFA9;
 }
 
-
-.footer_col_right{
+.footer_col_right {
     margin-top: 3%;
-    width: 30%;
+    width: 25rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
+}
+
+.footer_col_right_1 {
+    display: flex;
+    flex-direction: column;
+    height: 13rem;
+}
+
+.footer_col_right_2 {
+    display: flex;
+    flex-direction: column;
+    height: 13rem;
+}
+
+
+
+/* Styles pour les petits écrans */
+
+@media (max-width: 1200px) {
+    .prev, .next {
+        padding: 8px; /* Réduire le padding des flèches */
+        font-size: 20px; /* Réduire la taille du texte */
+    }
+
+    .prev {
+        left: 5px; /* Ajuster la position à gauche */
+    }
+
+    .next {
+        right: 5px; /* Ajuster la position à droite */
+    }
+
+    .footer_col_right {
+        width: 20rem;
+    }
+}
+
+@media (max-width: 830px) {
+    .prev, .next {
+        transform: translateY(-700%);
+        padding: 8px; /* Réduire le padding des flèches */
+        font-size: 20px; /* Réduire la taille du texte */
+    }
+    
+    .div_footer {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer_col_right {
+        width: 30rem;
+    }
+
+    .img_rose_div{
+        justify-content: space-evenly;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .prev, .next {
+        transform: translateY(-700%);
+        padding: 8px; /* Réduire le padding des flèches */
+        font-size: 20px; /* Réduire la taille du texte */
+    }
+
+    .prev {
+        left: 5px; /* Ajuster la position à gauche */
+    }
+
+    .next {
+        right: 5px; /* Ajuster la position à droite */
+    }
+}
+
+/* Styles pour les écrans très petits (ex. : portrait téléphone) */
+@media (max-width: 400px) {
+    .prev, .next {
+        transform: translateY(-850%);
+        padding: 6px; /* Réduire encore plus le padding */
+        font-size: 18px; /* Réduire encore plus la taille du texte */
+    }
+
+    .prev {
+        left: 3px; /* Ajuster la position à gauche */
+    }
+
+    .next {
+        right: 3px; /* Ajuster la position à droite */
+    }
+}
+
+@media (max-width: 382px) {
+    .footer_col_right {
+        justify-content: center;
+    }
+    
+    .footer_col_right_1 {
+        padding-right: 0;
+        height: 11rem;
+    }
 }
