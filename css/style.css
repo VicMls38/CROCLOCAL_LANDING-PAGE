@@ -170,14 +170,19 @@ margin-top: 5%;
     position: relative;
 }
 
-/* .all_mid_content::after{
-    content: url('../img/hexagon_vert.png');
+.all_mid_content::after{
+    content: '';
+    background-image: url('../img/hexagon_vert.png');
+    background-repeat: no-repeat;
+    background-size: contain;
     position: absolute;
     bottom: 0;
     left: calc(50% - 50vw);
     z-index: 0;
     transform: translateY(60%);
-} */
+    width: 483px;
+    height: 711px;
+}
 
 .mid_all_content{
     width: 30rem;
@@ -258,7 +263,7 @@ margin-top: 5%;
 
 }
 .pourquoi_div.orange{
-    margin-top: 25%;
+    margin-top: 15rem;
     background-color: #F29A79;
 }
 
@@ -700,6 +705,14 @@ footer {
     }
 }
 
+@media (max-width: 500px) {
+    .all_mid_content::after{
+        width: 300px;
+        height: 490px;
+        transform: translateY(80%);
+    }
+}
+
 /* Styles pour les écrans très petits (ex. : portrait téléphone) */
 @media (max-width: 400px) {
     .prev, .next {
@@ -725,5 +738,14 @@ footer {
     .footer_col_right_1 {
         padding-right: 0;
         height: 11rem;
+    }
+}
+
+@media (max-width: 310px) {
+    .mid_text_content h2{
+        font-size: 1.3em;
+    }
+    .div_form ::before{
+        width: 200px;
     }
 }
