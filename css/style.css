@@ -469,15 +469,6 @@ margin-top: 5%;
     color: #F29A79;
     cursor: pointer;
 }
-.div_avis{
-    width: 100%;
-    height: 20rem;
-    background-color: #F29A79;
-    border-radius: 16px;
-}
-
-
-
 
 /* Footer */
 footer {
@@ -541,6 +532,65 @@ footer {
 }
 
 
+/* Css Splide (pour Avis)*/
+
+.splide{
+    background-color: #F29A79;
+    border-radius: 16px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.splide__slide {
+    display: flex;
+    justify-content: center;
+}
+
+.avis {
+    width: 90%;
+    /* L'avis occupe 80% de l'espace visible pour laisser un aperçu */
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 250px;
+}
+
+.avis-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.etoiles {
+    color: #FFD700;
+    /* Couleur or pour les étoiles */
+    font-size: 18px;
+}
+
+.date {
+    font-size: 14px;
+    color: #777;
+}
+
+.avis-texte {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.auteur {
+    font-size: 14px;
+    color: #555;
+    text-align: left;
+}
+
+/* Fin du css Splide */
+
 
 /* Styles pour les petits écrans */
 
@@ -563,6 +613,13 @@ footer {
     }
 
     
+}
+
+/* Pour rendre la vue responsive */
+@media (max-width: 950px) {
+    .avis {
+        width: 75%;
+    }
 }
 
 @media (max-width: 830px) {
@@ -605,6 +662,23 @@ footer {
     }
 }
 
+/* Pour rendre la vue responsive */
+@media (max-width: 750px) {
+    .avis {
+        width: 95%;
+        /* L'avis s'élargit un peu sur mobile */
+        padding: 15px;
+    }
+
+    .avis-texte {
+        font-size: 14px;
+    }
+
+    .date,
+    .auteur {
+        font-size: 12px;
+    }
+}
 
 @media (max-width: 600px) {
     .prev, .next {
