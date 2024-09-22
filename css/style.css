@@ -284,9 +284,9 @@ margin-top: 5%;
     gap: 30px;
 }
 
-.flex_pourquoi_text, .flex_pourquoi_img{
+/* .flex_pourquoi_text, .flex_pourquoi_img{
     flex: 1 1 calc(50% - 30px);
-}
+} */
 
 .flex_pourquoi_text{
     display: flex;
@@ -301,12 +301,7 @@ margin-top: 5%;
 }
 
 .flex_pourquoi_text h3{
-    margin-bottom: 15%;
-}
-
-.flex_pourquoi_text p{
-    margin-bottom: 15%;
-    
+    margin-bottom: 3rem;
 }
 
 .pourquoi_img{
