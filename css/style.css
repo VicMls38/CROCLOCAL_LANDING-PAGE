@@ -17,18 +17,13 @@ html {
     align-items: center;
     width: 100%;
     min-height: 100vh;
-    background: 
-        linear-gradient(
-            to bottom, 
-            rgba(0, 0, 0, 0) 50%, 
-            #fff 100%
-        ), 
-        url('../img/img_top_1.png') no-repeat center/cover;
+    background: url('../img/img_top_1.png') no-repeat;
+    background-size: cover;
     background-color: #fff; /* Same as the final color of the gradient */
 }
 
 .logo_div{
-    height: 70vh;
+    width: 20rem;
 }
 
 .logo_img{
@@ -38,50 +33,53 @@ html {
 
 .head_img_text{
     display: block;
-    font-size: x-large;
     text-align: center;
 }
-.head_img_text .fleche_bas{
-    display: block;
-    margin: 10% auto 0 auto;
+
+.head_img_text h2{
+    font-weight: unset;
+    font-size: 2rem;
 }
 
 /* ---------------------------------------------*/
 
 .head_text_div{
-    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    margin-bottom: 100px;
+    margin-top: 4rem;
     min-height: 300px;
-}
-.head_text_text{
-    width: 62%;
     margin-left: 8%;
-    position: relative;
-    top: -5%;
+    margin-right: 8%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.head_text_text h3{
+    font-weight: unset;
 }
 .head_text_text h1{
     font-weight: bolder;
-    color: #F29A79;
+    color: #442D3C;
+    font-size: 1.8rem;
 }
 .head_text_text p{
 margin-top: 5%;
 }
 .head_text_text .btn_download{
     margin-top: 5%;
-    padding: 15px;
+    padding: 5px;
     border-radius: 40px;
-    border: 2px solid #F29A79;
-    background-color: #F29A79;
+    border: 2px solid #70B54D;
+    background-color: #70B54D;
     color: #fff;
     font-weight: bold;
     transition: all 0.3s;
 }
 .head_text_text .btn_download:hover{
     cursor: pointer;
-    color: #F29A79;
+    color: #70B54D;
     background-color: #fff;
 }
 
@@ -111,29 +109,33 @@ margin-top: 5%;
 
 .img_rose_div{
     position: relative;
-    width: 95%;
-    margin: 0 auto 75px auto;
+    margin-top: 6rem;
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
-    justify-content: space-between;
+    gap: 8vw;
+    justify-content: center;
 }
 
-.img_rose_div::before {
+/* .img_rose_div::before {
     content: "";
     position: absolute;
     inset: 0 calc(50% - 50vw);
     z-index: -1;
+} */
+
+.img_rose_div div {
+    text-align: center;
 }
 
 .img_rose_div div img {
-    width: 100%;
+    width: 8rem;
     height: 150px;
     object-fit: contain;
 }
 
 .img_rose_div div h3 {
     text-align: center;
+    font-weight: unset;
 }
 
 .img_rose{
@@ -153,12 +155,14 @@ margin-top: 5%;
 /*-------------------------------------------*/
 
 .mid_content_div{
+    margin-top: 6rem;
     width: 100%;
 }
 .title_1_mid_content{
-    margin-bottom: 5%;
-    margin-left: 5%;
-    color: #F29A79;
+    margin-bottom: 2%;
+    margin-left: 8%;
+    color: #442D3C;
+    font-size: 3rem;
 }
 
 .all_mid_content{
@@ -170,7 +174,7 @@ margin-top: 5%;
     position: relative;
 }
 
-.all_mid_content::after{
+/* .all_mid_content::after{
     content: '';
     background-image: url('../img/hexagon_vert.png');
     background-repeat: no-repeat;
@@ -182,7 +186,7 @@ margin-top: 5%;
     transform: translateY(60%);
     width: 483px;
     height: 711px;
-}
+} */
 
 .mid_all_content{
     width: 30rem;
@@ -190,9 +194,15 @@ margin-top: 5%;
 
 #consommateur{
     background: url(../img/content_consommateur.png) no-repeat center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #producteur{
     background: url(../img/content_producteur.png) no-repeat center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .mid_content{
@@ -200,7 +210,7 @@ margin-top: 5%;
     border: solid 3px #6DBFA9;
     overflow: hidden;
     position: relative;
-    padding: 1rem;
+    padding: 1.5rem;
     z-index: 1;
     min-height: 400px;
 }
@@ -217,17 +227,22 @@ margin-top: 5%;
 .mid_text_content{
     padding: 25px;
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.3); /* Couleur avec opacité pour la transparence */
+    background-color: #FBF39C; /* Couleur avec opacité pour la transparence */
     backdrop-filter: blur(10px); /* Applique le flou */
     position: relative;
     color: black !important;
     z-index: 3;
+    text-align: center;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .mid_text_content h2{
     margin-bottom: 10%;
     font-size: 1.5em;
-    color: #F29A79;
+    color: #442D3C;
 }
 .mid_text_content p{
     font-size: large;
@@ -237,9 +252,9 @@ margin-top: 5%;
     display: block;
     margin: 5% auto;
     border-radius: 50px;
-    border: 2px solid #F29A79;
-    background-color: #F29A79;
-    padding: 15px;
+    border: 2px solid #F9B628;
+    background-color: #F9B628;
+    padding: 5px;
     color: #fff;
     font-size: large;
     transition: all 0.3s;
@@ -249,7 +264,7 @@ margin-top: 5%;
 
 .mid_content_btn:hover{
     cursor: pointer;
-    color: #F29A79;
+    color: #F9B628;
     background-color: #fff;
 }
 
@@ -263,12 +278,12 @@ margin-top: 5%;
 
 }
 .pourquoi_div.orange{
-    margin-top: 15rem;
-    background-color: #F29A79;
+    margin-top: 5rem;
+    background-color: #F3CFB6;
 }
 
 .pourquoi_div.orange h2{
-    color:#fff;
+    color:#442D3C;
 }
 
 .pourquoi_div h2{
@@ -297,7 +312,7 @@ margin-top: 5%;
 
 .pourquoi_div.orange .flex_pourquoi_text h3,
 .pourquoi_div.orange .flex_pourquoi_text p {
-    color: #fff;
+    color: black;
 }
 
 .flex_pourquoi_text h3{
@@ -393,7 +408,7 @@ margin-top: 5%;
     position: relative;
     padding-bottom: 150px;
 }
-.div_form ::before{
+/* .div_form ::before{
     content: '';
     background-image: url('../img/fleur.png');
     background-repeat: no-repeat;
@@ -404,8 +419,8 @@ margin-top: 5%;
     z-index: -1;
     height: 300px;
     width: 300px;
-}
-.div_form ::after{
+} */
+/* .div_form ::after{
     content: '';
     background-image: url('../img/ruche.png');
     background-repeat: no-repeat;
@@ -416,7 +431,7 @@ margin-top: 5%;
     z-index: -1;
     width: 250px;
     height: 250px;
-}
+} */
 
 .div_form h2{
     color:#F29A79;
@@ -592,6 +607,67 @@ footer {
 /* Fin du css Splide */
 
 
+/* CSS panier */
+
+#bloc_panier{
+    display: flex; 
+    justify-content: center; 
+    width: 100%;
+}
+
+#imageBack{
+    width: 22rem;
+    height: 22rem;
+    background-image: url("../img/panier_fruit.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#imageFirst{
+    background-color: white;
+    background-image: url("../img/panier.png");
+    background-size: cover; /* Utilise 'cover' ou 'contain' selon ton besoin */
+    background-repeat: no-repeat;
+    background-position: left center; /* L'image commence à gauche, centrée verticalement */
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Cache tout ce qui dépasse de l'image */
+    position: relative;
+}
+
+@media (max-width: 850px) {
+    .head_text_div{
+        text-align: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 700px) {
+    #imageBack{
+        width: 18rem;
+        height: 18rem;
+    }
+}
+
+@media (max-width: 550px) {
+    #imageBack{
+        width: 15rem;
+        height: 15rem;
+    }
+}
+
+@media (max-width: 400px) {
+    #imageBack{
+        width: 13rem;
+        height: 13rem;
+    }
+}
+
+/* Fin du css panier */
+
+
 /* Styles pour les petits écrans */
 
 @media (max-width: 1200px) {
@@ -642,21 +718,6 @@ footer {
         justify-content: space-evenly;
     }
 
-    .head_img_div{
-        justify-content: space-between;
-        min-height: 98vh;
-    }
-
-    .head_img_div h2{
-        font-size: 1em;
-    }
-
-    .logo_div{
-        display: flex;
-        align-items: center;
-        height: 40vh;
-    }
-
     .head_text_div{
         margin-top: 2rem;
     }
@@ -701,11 +762,11 @@ footer {
 }
 
 @media (max-width: 500px) {
-    .all_mid_content::after{
+    /* .all_mid_content::after{
         width: 300px;
         height: 490px;
         transform: translateY(80%);
-    }
+    } */
 }
 
 /* Styles pour les écrans très petits (ex. : portrait téléphone) */
@@ -740,7 +801,7 @@ footer {
     .mid_text_content h2{
         font-size: 1.3em;
     }
-    .div_form ::before{
+    /* .div_form ::before{
         width: 200px;
-    }
+    } */
 }
