@@ -8,6 +8,8 @@
         <!-- Inclusion de Splide CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css">
         <!-- Inclusion de Splide CSS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css">
     
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -27,18 +29,21 @@
             <h3>Chez CROC'LOCAL,</h3>
             <h1>Nous vous accompagnons dans <br> la consommation locale</h1>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                Nous facilitons votre accès à des fruits et légumes frais et de saison, directement issus des producteurs près de chez vous. 
+                Grâce à notre application, commandez facilement des paniers locaux, 
+                soutenez l’agriculture de votre région et contribuez à une consommation plus responsable. 
+                Faites le choix du goût, de la fraîcheur et du circuit court, tout en simplifiant votre quotidien.
             </p>
             <button class="btn_download">Télécharger l'application</button>
         </div>
         <div id="bloc_panier">
-            <div id="imageBack">
-                <div id="imageFirst">
-                </div>
-            </div>
+            <img-comparison-slider class="slider-with-animated-handle" value="100">
+                <img slot="first" id="imageFirst" src="./img/panier.png">
+                <img slot="second" id="imageBack" src="./img/panier_fruit.png">
+                <svg slot="handle" class="custom-animated-handle" xmlns="http://www.w3.org/2000/svg" width="100" viewBox="-8 -3 16 6">
+                    <path stroke="#000" d="M -5 -2 L -7 0 L -5 2 M -5 -2 L -5 2 M 5 -2 L 7 0 L 5 2 M 5 -2 L 5 2" stroke-width="1" fill="#000" vector-effect="non-scaling-stroke"></path>
+                </svg>
+            </img-comparison-slider>
         </div>
     </div>
 
@@ -283,9 +288,12 @@
     <footer>
         <div class="div_footer">
             <div class="footer_col_left">
-                <img src="./img/logo_footer.png" alt="">
                 <h4 style="margin-top:  0;">Entreprise française spécialisée <br> dans l'emballage pour les boissons <br> et les produits alimentaires.</h4>
                 <p>Tous droits réservés.</p>
+            </div>
+
+            <div>
+                <img src="./img/logo.png" id="logo_fin" alt="">
             </div>
 
             <div class="footer_col_right">
