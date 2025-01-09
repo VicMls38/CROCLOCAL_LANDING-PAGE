@@ -22,6 +22,10 @@ html {
     background-color: #fff; /* Same as the final color of the gradient */
 }
 
+input[type=checkbox]{
+    margin-bottom: 0 !important;
+}
+
 .logo_div{
     width: 20rem;
 }
@@ -67,15 +71,19 @@ html {
 .head_text_text p{
 margin-top: 5%;
 }
-.head_text_text .btn_download{
+
+.btn_download{
     margin-top: 5%;
     padding: 5px;
     border-radius: 40px;
-    border: 2px solid #70B54D;
-    background-color: #70B54D;
     color: #fff;
     font-weight: bold;
     transition: all 0.3s;
+}
+
+.head_text_text .btn_download{
+    border: 2px solid #70B54D;
+    background-color: #70B54D;
 }
 .head_text_text .btn_download:hover{
     cursor: pointer;
@@ -151,6 +159,36 @@ margin-top: 5%;
     flex-wrap: nowrap;
     justify-content: space-evenly;
 }
+
+.flex_pourquoi_div {
+    position: relative; /* Nécessaire pour que ::before et ::after soient positionnés relativement à cette div */
+}
+
+.flex_pourquoi_div::before {
+    content: '';
+    position: absolute;
+    bottom: calc(-5% - 10vh);
+    left: calc(50% - 50vw);
+    width: 180px;
+    height: 180px;
+    background: url('../img/cloud.png');
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.flex_pourquoi_div::after {
+    content: '';
+    position: absolute;
+    top: calc(60% - 10vh);
+    right: calc(57% - 50vw);
+    width: 350px;
+    height: 350px;
+    background: url('../img/carrot.png') no-repeat center/contain;
+    z-index: 2;
+}
+
+
 
 /*-------------------------------------------*/
 
@@ -240,7 +278,7 @@ margin-top: 5%;
 }
 
 .mid_text_content h2{
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     font-size: 1.5em;
     color: #442D3C;
 }
@@ -271,7 +309,7 @@ margin-top: 5%;
 /* -------------------------------------------*/
 
 .pourquoi_div{
-    padding: 60px 0 50px;
+    padding: 30px 0 20px;
     width: 100%;
     border-radius: 16px;
     position: relative;
@@ -284,11 +322,6 @@ margin-top: 5%;
 
 .pourquoi_div.orange h2{
     color:#442D3C;
-}
-
-.pourquoi_div h2{
-    margin-left: 10%;
-    
 }
 
 .flex_pourquoi_div{
@@ -307,7 +340,8 @@ margin-top: 5%;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    width: 30%;
 }
 
 .pourquoi_div.orange .flex_pourquoi_text h3,
@@ -326,25 +360,19 @@ margin-top: 5%;
 
 
 .pourquoi_div .btn_download{
-    padding: 15px;
-    border-radius: 40px;
-    display: block;
     margin-left: auto;
     margin-right: auto;
-    border: none;
-    color: white;
     border: 1px solid #F29A79;
     background: #F29A79;
-    font-weight: bold;
-    font-size: medium;
     cursor: pointer;
     transition: all 0.3s;
 }
 
 .pourquoi_div.orange .btn_download{
-    color: #F29A79;
-    background-color: #fff; 
-    border: 2px solid #fff; 
+    margin-left: 0;
+    color: #fff;
+    background-color: #D35E15; 
+    border: 2px solid #D35E15; 
     transition: all 0.3s;
 }
 
@@ -355,9 +383,9 @@ margin-top: 5%;
 }
 
 .pourquoi_div.orange .btn_download:hover{
-    background-color: #F29A79;  
-    color: #fff;
-    }
+    background-color: #fff;  
+    color: #D35E15;
+}
 /*-----------------------------------------*/
 
 .all_equipe_div{
@@ -403,10 +431,9 @@ margin-top: 5%;
 
 
 .div_form{
-    max-width: 70%;
     margin: 0 auto;
     position: relative;
-    padding-bottom: 150px;
+    padding-bottom: 30px;
     background-color: #CEDD8F;
 }
 /* .div_form ::before{
@@ -435,9 +462,11 @@ margin-top: 5%;
 } */
 
 .div_form h2{
-    color:#F29A79;
-    margin-bottom: 50px;
-
+    color:#442D3C;
+    padding: 2rem;
+    padding-bottom: 2rem;
+    font-size: 3rem;
+    text-align: center;
 }
 
 .div_form form{
@@ -533,12 +562,11 @@ footer {
 }
 
 .footer_col_left h4 {
-    color: #6DBFA9;
+    color: #D25D16;
 }
 
 .footer_col_right {
     margin-top: 3%;
-    width: 25rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -557,11 +585,111 @@ footer {
     height: 13rem;
 }
 
+/* css tuto */
+
+.bloc_tuto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20rem;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.etape_tuto{
+    display: flex;
+}
+
+.num_etape{
+    height: 100px;
+}
+
+.text_tuto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 1rem;
+}
+
+.gros_titre{
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+.btn_contact{
+    color: #FBF39C !important;
+    background-color: #F9B628 !important;
+    border: 1px solid#F9B628 !important;
+}
+
+.btn_contact:hover{
+    color: #F9B628 !important;
+    background-color: #FBF39C !important;
+}
+
+.flex_equipe_text{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    width: 20%;
+}
+
+.flex_equipe_text h2{
+    margin-bottom: 1rem;
+    font-size: 1.7rem;
+}
+
+.header_bloc_btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    width: 94%;
+}
+
+.header_bloc_btn .btn_download{
+    margin-top: 0;
+    border: 2px solid #70B54D;
+    background-color: #70B54D;
+}
+.header_bloc_btn .btn_download:hover{
+    cursor: pointer;
+    color: #70B54D;
+    background-color: #fff;
+}
+
+.btn_header{
+    background: #6FB34D;
+    border-radius: 10px;
+}
+
+.btn_header:hover{
+    background: #88cc66;
+}
+
+#btn_header_fb{
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+
+#btn_header_insta{
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+
+
+/* */
+
 
 /* Css Splide (pour Avis)*/
 
 .splide{
-    background-color: #F29A79;
+    background-color: #FFF;
     border-radius: 16px;
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -576,6 +704,7 @@ footer {
     width: 90%;
     /* L'avis occupe 80% de l'espace visible pour laisser un aperçu */
     background-color: white;
+    border: 1px solid#4FA290;
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -643,10 +772,7 @@ footer {
 }
 
 @media (max-width: 850px) {
-    .head_text_div{
-        text-align: center;
-        flex-wrap: wrap;
-    }
+
 }
 
 @media (max-width: 700px) {
@@ -695,17 +821,82 @@ footer {
         right: 5px; /* Ajuster la position à droite */
     }
 
-    .footer_col_right {
-        width: 20rem;
+    .flex_pourquoi_text{
+        width: 30rem;
     }
 
-    
+    .flex_equipe_text{
+        width: 35rem;
+        text-align: center;
+    }
+
+    .flex_pourquoi_div::after {
+        top: calc(70% - 10vh);
+        right: calc(50% - 50vw);
+        width: 250px;
+        height: 250px;
+    }
+
 }
 
 /* Pour rendre la vue responsive */
 @media (max-width: 950px) {
+
+    .head_text_div{
+        text-align: center;
+        flex-wrap: wrap;
+    }
+
     .avis {
         width: 75%;
+    }
+
+    .div_footer{
+        justify-content: space-around;
+    }
+
+    .footer_col_right {
+        width: 30rem;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .div_form h2{
+        font-size: 2rem;
+    }
+
+    .flex_pourquoi_img{
+        width: 25rem;
+    }
+
+    .flex_pourquoi_div{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mot_equipe{
+        flex-direction: column !important;
+    }
+
+    .pourquoi_div.orange .btn_download{
+        margin-left: auto;
+    }
+
+    .flex_pourquoi_text{
+        text-align: center;
+    }
+
+    .flex_equipe_text{
+        width: 25rem;
+    }
+
+    .flex_pourquoi_text p{
+        margin-bottom: 0;
+    }
+
+    .flex_pourquoi_div::before {
+        bottom: calc(-2% - 10vh);
     }
 }
 
@@ -721,16 +912,19 @@ footer {
         text-align: center;
     }
 
-    .footer_col_right {
-        width: 30rem;
-    }
-
     .img_rose_div{
         justify-content: space-evenly;
     }
 
     .head_text_div{
         margin-top: 2rem;
+    }
+
+    .flex_pourquoi_div::after {
+        top: calc(90% - 10vh);
+        right: calc(50% - 50vw);
+        width: 200px;
+        height: 200px;
     }
 }
 
@@ -749,6 +943,14 @@ footer {
     .date,
     .auteur {
         font-size: 12px;
+    }
+}
+
+/* Pour rendre la vue responsive */
+@media (max-width: 700px) {
+    .flex_pourquoi_div::after {
+        top: calc(40% - 10vh);
+        right: calc(85% - 50vw);
     }
 }
 
@@ -773,6 +975,15 @@ footer {
 }
 
 @media (max-width: 500px) {
+    .flex_pourquoi_text{
+        font-size: 0.8rem;
+        width: 90%;
+    }
+
+    .flex_pourquoi_div::after {
+        top: calc(40% - 10vh);
+        right: calc(80% - 50vw);
+    }
     /* .all_mid_content::after{
         width: 300px;
         height: 490px;
