@@ -75,10 +75,12 @@ margin-top: 5%;
 .btn_download{
     margin-top: 5%;
     padding: 5px;
-    border-radius: 40px;
+    border-radius: 10px;
     color: #fff;
     font-weight: bold;
     transition: all 0.3s;
+    box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.2);
+    font-size: 1.2rem;
 }
 
 .head_text_text .btn_download{
@@ -294,7 +296,8 @@ margin-top: 5%;
 .mid_content_btn{
     display: block;
     margin: 5% auto;
-    border-radius: 50px;
+    border-radius: 10px;
+    box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.2);
     border: 2px solid #F9B628;
     background-color: #F9B628;
     padding: 5px;
@@ -371,28 +374,12 @@ margin-top: 5%;
     object-fit: cover;
 }
 
-
-.pourquoi_div .btn_download{
-    margin-left: auto;
-    margin-right: auto;
-    border: 1px solid #F29A79;
-    background: #F29A79;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
 .pourquoi_div.orange .btn_download{
     margin-left: 0;
     color: #fff;
     background-color: #D35E15; 
     border: 2px solid #D35E15; 
     transition: all 0.3s;
-}
-
-.pourquoi_div .btn_download:hover{
-    background-color: #fff;  
-    color: #F29A79;
-
 }
 
 .pourquoi_div.orange .btn_download:hover{
@@ -449,6 +436,18 @@ margin-top: 5%;
     padding-bottom: 30px;
     background-color: #CEDD8F;
 }
+
+.div_form::before {
+    content: '';
+    position: absolute;
+    top: calc(53% - 10vh);
+    left: calc(49% - 50vw);
+    width: 400px;
+    height: 400px;
+    background: url('../img/contact1.png') no-repeat center/contain;
+    z-index: 1;
+}
+
 /* .div_form ::before{
     content: '';
     background-image: url('../img/fleur.png');
@@ -493,6 +492,8 @@ margin-top: 5%;
     flex-direction: column;
     max-width: 90%;
     margin: 0 auto;
+    position: relative;
+    z-index: 2;
 }
 
 .div_form form input, .div_form form textarea{
@@ -515,23 +516,6 @@ margin-top: 5%;
 
 #capchat{
     background-color: #F6F4EB;
-}
-
-.div_form form button{
-    margin: 0 auto;
-    background-color: #F29A79;
-    font-weight: bold;
-    border-radius: 40px;
-    padding: 15px;
-    width: fit-content;
-   border: 2px solid #F29A79;
-   transition: all 0.3s;
-    color: white;
-}
-.div_form form button:hover{
-    background-color: #fff;
-    color: #F29A79;
-    cursor: pointer;
 }
 
 /* Footer */
@@ -635,25 +619,25 @@ footer {
 }
 
 .btn_contact{
-    color: #FBF39C !important;
+    color: #fff!important;
     background-color: #F9B628 !important;
     border: 1px solid#F9B628 !important;
 }
 
 .btn_contact:hover{
     color: #F9B628 !important;
-    background-color: #FBF39C !important;
+    background-color: #fff !important;
 }
 
 .btn_msg{
-    color: #FBF39C !important;
+    color: #fff !important;
     background-color: #70B54D !important;
     border: 1px solid#70B54D !important;
 }
 
 .btn_msg:hover{
     color: #70B54D !important;
-    background-color: #FBF39C !important;
+    background-color: #fff !important;
 }
 
 .flex_equipe_text{
@@ -661,7 +645,7 @@ footer {
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: center;
-    width: 20%;
+    width: 30%;
 }
 
 .flex_equipe_text h2{
@@ -830,7 +814,7 @@ footer {
         width: 15rem;
     }
     #imageBack{
-        width: 18rem;
+        width: 15rem;
     }
 }
 
