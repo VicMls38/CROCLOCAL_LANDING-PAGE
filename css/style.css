@@ -152,6 +152,11 @@ margin-top: 5%;
     margin-right: auto;
     margin-left: auto;
 }
+
+.flex_equipe_img{
+    width: 60%;
+}
+
 .title_category{
     margin: 2% auto 0 auto;
     display: flex;
@@ -475,6 +480,12 @@ margin-top: 5%;
     padding-bottom: 2rem;
     font-size: 3rem;
     text-align: center;
+    font-family: "Asap", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 700;
 }
 
 .div_form form{
@@ -526,7 +537,6 @@ margin-top: 5%;
 /* Footer */
 footer {
     width: 100%;
-    background-color: #f9f9f9;
     padding: 0 0;
     position: relative;
     bottom: 0;
@@ -710,8 +720,33 @@ footer {
 .splide{
     background-color: #FFF;
     border-radius: 16px;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 0;
+    padding-bottom: 10rem;
+}
+
+.splide::after {
+    content: '';
+    position: absolute;
+    top: calc(60% - 10vh);
+    right: calc(50% - 50vw);
+    width: 250px;
+    height: 250px;
+    background: url('../img/carrot2.png') no-repeat center/contain;
+    z-index: 2;
+}
+
+.splide h2{
+    color:#442D3C;
+    padding: 2rem;
+    padding-bottom: 2rem;
+    font-size: 3rem;
+    text-align: center;
+    font-family: "Asap", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 700;
 }
 
 .splide__slide {
@@ -788,10 +823,6 @@ footer {
 
 #imageFirst{
     width: 22rem;
-}
-
-@media (max-width: 850px) {
-
 }
 
 @media (max-width: 700px) {
@@ -888,6 +919,10 @@ footer {
         width: 25rem;
     }
 
+    .flex_equipe_img{
+        width: 25rem;
+    }
+
     .flex_pourquoi_div{
         flex-direction: column-reverse;
         justify-content: center;
@@ -968,6 +1003,13 @@ footer {
     .date,
     .auteur {
         font-size: 12px;
+    }
+
+    .splide::after {
+        top: calc(80% - 10vh);
+        right: calc(80% - 50vw);
+        width: 200px;
+        height: 200px;
     }
 }
 

@@ -10,6 +10,10 @@
         <!-- Inclusion de Splide CSS -->
     <script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -206,8 +210,8 @@
 
     <div class="pourquoi_div">
         <div class="flex_equipe_div mot_equipe">
-            <div class="flex_pourquoi_img">
-                <img src="img/equipe.webp" class="pourquoi_img" id="img_equipe" alt="">
+            <div class="flex_pourquoi_img flex_equipe_img">
+                <img src="img/equipe.jpg" class="pourquoi_img" id="img_equipe" alt="">
             </div>
             <div class="flex_equipe_text">
                 <div>
@@ -221,37 +225,10 @@
         </div>
     </div>
 
-    <div class="div_form">
-        <h2>BESOIN DE PLUS D'INFORMATIONS ?</h2>
-        <form action="">
-            <label for="prenom">Prénom : </label>
-            <input type="text" name="" id="prenom">
-
-            <label for="nom">Nom : </label>
-            <input type="text" name="" id="nom">
-
-            <label for="email">Adresse mail : </label>
-            <input type="mail" name="" id="email">
-
-            <label for="message">Message : </label>
-            <textarea name="message" id="message"></textarea>
-
-            <div>
-                En cochant cette case, vous consentez à la collecte et au traitement de vos données personnelles conformément aux finalités mentionnées ci-dessus.
-            </div>
-            <br>
-            <div class="check">
-                <input type="checkbox" name="" id="receive_message">
-                <label for="receive_message">J'accepte que mes données personnelles soient collectées et traitées pour la gestion de mon compte utilisateur sur l'application CrocLocal.</label>
-            </div>
-            <br>    
-            <button type="submit" class="btn_msg">Envoyer</button>
-      
-        </form>
-    </div>
 
     <!-- Carrousel des avis -->
     <div class="splide" id="avis-carousel">
+        <h2>Ils ont croqués local</h2>
         <div class="splide__track">
         <ul class="splide__list">
             <li class="splide__slide">
@@ -316,6 +293,34 @@
     </div>
 
 
+    <div class="div_form">
+        <h2>BESOIN DE PLUS D'INFORMATIONS ?</h2>
+        <form action="">
+            <label for="prenom">Prénom : </label>
+            <input type="text" name="" id="prenom">
+
+            <label for="nom">Nom : </label>
+            <input type="text" name="" id="nom">
+
+            <label for="email">Adresse mail : </label>
+            <input type="mail" name="" id="email">
+
+            <label for="message">Message : </label>
+            <textarea name="message" id="message"></textarea>
+
+            <div>
+                En cochant cette case, vous consentez à la collecte et au traitement de vos données personnelles conformément aux finalités mentionnées ci-dessus.
+            </div>
+            <br>
+            <div class="check">
+                <input type="checkbox" name="" id="receive_message">
+                <label for="receive_message">J'accepte que mes données personnelles soient collectées et traitées pour la gestion de mon compte utilisateur sur l'application CrocLocal.</label>
+            </div>
+            <br>    
+            <button type="submit" class="btn_msg">Envoyer</button>
+      
+        </form>
+    </div>
 
     <footer>
         <div class="div_footer">
